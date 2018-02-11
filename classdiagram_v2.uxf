@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>9</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>270</x>
+      <y>36</y>
+      <w>207</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Claim
+--
+- claimID: string
+- claimType: string
+- dateTime: date
+- location: string
+- description: string
+- files: string
+- claimStatus: string
+- policyID: string
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>900</x>
+      <y>477</y>
+      <w>207</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>Policy
+--
+- pID: string
+- coverageType: string
+- coverageValue: float
+- inclusion: string
+- exclusion: string
+- excess: float 
+- premium: float
+- carID: string 
+- phID: string
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>909</x>
+      <y>36</y>
+      <w>189</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>PolicyHolder
+--
+- phID: string
+- fName: string
+- lName: string
+- dob: date
+- email: string
+- phoneNo: string
+- gender: enum
+- citizenship: string
+- address: string
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1278</x>
+      <y>477</y>
+      <w>243</w>
+      <h>189</h>
+    </coordinates>
+    <panel_attributes>Car
+--
+- carID: string
+- carType: string
+- driverAge: integer
+- manufactureDate: date
+- modificationStatus: boolean
+- driverRating: integer
+- licenseStatus: boolean
+- suburbDriver: boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1215</x>
+      <y>36</y>
+      <w>180</w>
+      <h>162</h>
+    </coordinates>
+    <panel_attributes>Company
+--
+- staffID: string
+- staffRole: string
+
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>54</x>
+      <y>504</y>
+      <w>189</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Assessor
+--
+- approvalStatus: boolean
+--</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>279</x>
+      <y>504</y>
+      <w>189</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Investigation Branch
+--
+- fraudStatus: boolean
+--
+
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>522</x>
+      <y>504</y>
+      <w>189</w>
+      <h>144</h>
+    </coordinates>
+    <panel_attributes>Finance Department
+--
+- payoutStatus: boolean
+- excessStatus: boolean
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>990</x>
+      <y>225</y>
+      <w>27</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>m1= 1
+m2= *
+lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;280.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>27</y>
+      <w>459</w>
+      <h>45</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=1
+&lt; </panel_attributes>
+    <additional_attributes>10.0;20.0;490.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>135</x>
+      <y>36</y>
+      <w>153</w>
+      <h>486</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1= 1
+m2= *
+assess ^</panel_attributes>
+    <additional_attributes>10.0;520.0;10.0;10.0;150.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>360</x>
+      <y>225</y>
+      <w>81</w>
+      <h>297</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=*
+m2=0..1
+validate ^</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>468</x>
+      <y>108</y>
+      <w>198</w>
+      <h>414</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=0..n
+m2=0..1
+??? ^</panel_attributes>
+    <additional_attributes>160.0;440.0;160.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1098</x>
+      <y>477</y>
+      <w>198</w>
+      <h>36</h>
+    </coordinates>
+    <panel_attributes>m1=0..n
+m2=0..1
+lt=&lt;&lt;&lt;&lt;-</panel_attributes>
+    <additional_attributes>10.0;10.0;200.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLNote</id>
+    <coordinates>
+      <x>729</x>
+      <y>306</y>
+      <w>216</w>
+      <h>117</h>
+    </coordinates>
+    <panel_attributes>Unsure:
+- Car / Car Policy Class
+- policyholder to policy
+composition or aggregation
+- association link on Policy to Car 
+- 0..1 -&gt; * for investigator to claim
+
+fg=red
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+</diagram>
